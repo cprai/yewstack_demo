@@ -1,0 +1,10 @@
+[tasks.all]
+dependencies = ["generate-wasm", "generate-html"]
+
+[tasks.generate-wasm]
+command = "wasm-pack"
+args = ["build", "--target", "web"]
+
+[tasks.generate-html]
+command = "cargo"
+args = ["script", "post.rs"]
